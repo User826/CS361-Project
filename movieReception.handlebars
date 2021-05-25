@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Demo Page</title>
+</head>
+
+<body onload="pastSearches()">
+    {{{body}}}
+
+
+
+
+
+    <div class="quarter-divider">Hi</div>
+    <div id="container">
+        <div class="box1"><a href="http://flip1.engr.oregonstate.edu:8264/past-searches">Past Searches</a></div>
+        <div class="box2"><a href="http://flip1.engr.oregonstate.edu:8264/movie-category">Movies by Category</a></div>
+        <div class="box3" style="background-color: rgb(34, 160, 245);">Movie Reception</div>
+        <div class="box4">Random Movie</div>
+        <span class="stretch"></span>
+    </div>
+    <form>
+        <fieldset>
+
+
+            {{!--
+    </form action="/" method="post"> --}}
+    </form>
+
+    <br />
+
+
+
+    <p>Please request temporary access then come back to start getting results! <a
+            href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank" rel="noopener noreferrer">Start!</a>.
+    </p>
+    <p>Please make sure that the movie name is in the format Movie name (film) or Movie name (Year of film)(film)</p>
+    <p>Examples include Guardians of the Galaxy (film) and Up (2009 film)</p>
+    <form>
+        <fieldset>
+
+            <legend>Want the recommedation?</legend>
+
+            <label>Movie Name:
+                <input type="text" name="movie_name" id="movie_name" size="25%" maxlength="100">
+            </label>
+            <br />
+            <br />
+
+            <br />
+            <button type="button" id="movie" value="Submit">Submit</button>
+            {{!-- <input type="submit" name="New List"> --}}
+            <br />
+            <div id="separator"></div>
+            <br />
+            <div id="results"></div>
+
+            <br />
+            <br />
+
+
+
+        </fieldset>
+        <br />
+    </form>
+
+
+    <br />
+     <script>
+        function pastSearches() {
+            var newTable = document.createElement("table");
+            var headerRow = document.createElement("thead");
+            var rowOne = document.createElement("tr");
+
+            for (var i = 1; i < Number(window.localStorage.getItem("count")); i++) {
+                var header = document.createElement("th")
+                header.textContent = window.localStorage.getItem(i);
+                header.style.border = "1px solid black"
+                rowOne.appendChild(header)
+            }
+
+            var tableBody = document.createElement("tbody")
+            newTable.appendChild(tableBody)
+
+            // for (var j = 1; j < 4; j++) {
+            // 	var newRow = document.createElement("tr")
+            // 	tableBody.appendChild(newRow)
+            // 	var newCell = document.createElement("td")
+            // 	for (var k = 1; k < 5; k++) {
+            // 		var newCell = document.createElement("td")
+            // 		newCell.textContent = j + "," + k;
+            // 		newCell.style.border = "1px solid black"
+            // 		newRow.appendChild(newCell)
+            // 	}
+
+            // }
+
+
+            newTable.style.border = "1px solid black"
+            docBody.appendChild(newTable)
+            newTable.appendChild(headerRow)
+            headerRow.appendChild(rowOne)
+
+
+        }
+    </script>
+
+    <script src="movieReception.js"></script>
+   
+
+</body>
+
+</html>
