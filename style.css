@@ -1,32 +1,30 @@
 table {
 border: 1px solid black;
 }
-
+    
 td {
 width: 500px;
 overflow: scroll;
 }
-
+    
 #separator {
 background-color: orange;
 height:30px;
 top: 20px;
 position: relative;
 margin-bottom: 20px;
-
 }
-
-
+    
+    
 #result {
 background-color: orange;
 height: 100%;
 top: 20px;
 position: relative;
 margin-bottom: 20px;
-
 }
-
-
+    
+    
 .quarter-divider {
 background-color: cyan;
 text-align: center;
@@ -34,24 +32,23 @@ height:33%;
 width: 75%;
 position: relative;
 margin-left: 12.5%;
-
 top: 33%;
 }
-
+    
 .box1,
 .box2,
 .box3,
 .box4 {
-  border: 5px outset rgb(34, 160, 245);
-  width: 200px;
-  height: 50px;
-  line-height:50px;
-  margin-top: 150px;
-  margin-left: 8%;
-  margin-right: 5%;
-  /* verticfal-align: top; */
-  text-align: center;
-  display: inline-block;
-  *display: inline;
-  zoom: 1
+border: 5px outset rgb(34, 160, 245);
+width: 200px;
+height: 50px;
+line-height:50px;
+margin-top: 150px;
+margin-left: 8%;
+margin-right: 5%;
+text-align: center;
+display: inline-block;
+*display: inline;
+zoom: 1;
 }
+    
